@@ -1,0 +1,57 @@
+:root {
+  --ink: #1f2937;
+  --muted: #6b7280;
+  --accent: #991b1b;
+  --accent-soft: #fef2f2;
+  --line: #e5e7eb;
+  --bg: #f8fafc;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0 auto;
+  padding: 2.5rem 1.25rem 4rem;
+  max-width: 900px;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: "Noto Sans SC", "Source Han Sans SC", "PingFang SC", "Microsoft YaHei", system-ui, -apple-system, sans-serif;
+  font-size: 16px;
+  line-height: 1.85;
+}
+h1, h2, h3, h4 { line-height: 1.35; color: var(--accent); }
+h1 { font-size: 2rem; margin: 0 0 .6rem; padding-bottom: .8rem; border-bottom: 3px solid var(--accent); }
+h2 { font-size: 1.45rem; margin: 2.6rem 0 .9rem; padding-left: .6rem; border-left: 5px solid var(--accent); }
+h3 { font-size: 1.15rem; margin: 2rem 0 .7rem; color: #111827; }
+a { color: #b91c1c; text-decoration: none; }
+a:hover { text-decoration: underline; }
+p { margin: .7rem 0; }
+hr { border: 0; border-top: 1px dashed var(--line); margin: 2.5rem 0; }
+blockquote {
+  margin: 1.2rem 0; padding: .8rem 1rem;
+  border-left: 4px solid #fca5a5; background: #fff;
+  color: #4b5563;
+}
+blockquote p { margin: .25rem 0; }
+table { border-collapse: collapse; width: 100%; margin: 1rem 0; background: #fff; font-size: .95rem; }
+th, td { border: 1px solid var(--line); padding: .55rem .7rem; text-align: left; vertical-align: top; }
+th { background: var(--accent-soft); color: #7f1d1d; white-space: nowrap; }
+tr:nth-child(even) td { background: #fbfdff; }
+ul, ol { padding-left: 1.5rem; }
+li { margin: .3rem 0; }
+code {
+  background: #eef2f7; color: #334155; padding: .1rem .35rem;
+  border-radius: 4px; font-size: .9em;
+}
+pre { background: #fff; border: 1px solid var(--line); border-radius: 8px; padding: 1rem; overflow-x: auto; line-height: 1.6; }
+pre code { background: none; padding: 0; }
+img {
+  display: block; max-width: 100%; height: auto;
+  margin: 1rem auto; border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(15, 23, 42, .14);
+}
+header#title-block-header { display: none; }
+footer { margin-top: 3rem; color: var(--muted); font-size: .85rem; text-align: center; }
+@media print {
+  body { max-width: none; padding: 0; background: #fff; }
+  img { box-shadow: none; page-break-inside: avoid; }
+  h2, h3 { page-break-after: avoid; }
+}
